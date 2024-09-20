@@ -10,7 +10,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Raleway:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="https://i.pinimg.com/originals/fb/03/38/fb0338efa3f4069da5dcf20c09f3a35e.jpg">
 
     <!-- Custom CSS -->
     <style>
@@ -20,10 +22,14 @@
             color: #333;
         }
 
-        h1, h2, h3, h5 {
+        h1,
+        h2,
+        h3,
+        h5 {
             font-family: 'Pirata One', cursive;
             color: #da3b01;
         }
+
 
         .navbar {
             background-color: #da3b01;
@@ -35,8 +41,6 @@
         }
 
         .hero-section {
-            
-           
             background-position: center;
             height: 400px;
             display: flex;
@@ -74,7 +78,17 @@
             color: black;
             font-weight: bold;
         }
-        
+
+        .lol {
+            font-family: 'Pirata One', cursive;
+            color: #da3b01;
+
+        }
+
+        .lol-hola {
+            font-family: 'Pirata One', cursive;
+            color: #f6f6f6;
+        }
     </style>
 </head>
 
@@ -83,25 +97,66 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand text-white" href="#">Haikyuuu Fan page</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Personajes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Arcos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Galería</a>
-                    </li>
-                </ul>
+            <div class="d-flex justify-content-center" id="navbarNav">
+                <div class="btn-group me-auto">
+                    <button type="button" class="btn btn-#da3b01 dropdown-toggle bg lol-hola" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Mira sobre Haikyuuu
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item lol" href="#">Haikyuu</a></li>
+                        <li><a class="dropdown-item lol" href="#">Nacional</a></li>
+                        <li><a class="dropdown-item lol" href="#">Torneo de Primavera</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group me-auto">
+                    <button type="button" class="btn btn-#da3b01 dropdown-toggle lol-hola" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Mira sobre Haikyuuu
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item lol" href="#">Haikyuu</a></li>
+                        <li><a class="dropdown-item lol" href="#">Nacional</a></li>
+                        <li><a class="dropdown-item lol" href="#">Torneo de Primavera</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group me-auto">
+                    <button type="button" class="btn btn-#da3b01 dropdown-toggle lol-hola" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Mira sobre Haikyuuu
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item lol" href="#">Haikyuu</a></li>
+                        <li><a class="dropdown-item lol" href="#">Nacional</a></li>
+                        <li><a class="dropdown-item lol" href="#">Torneo de Primavera</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group me-auto">
+                    <button type="button" class="btn btn-#da3b01 dropdown-toggle lol-hola" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Mira sobre Haikyuuu
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item lol" href="#">Haikyuu</a></li>
+                        <li><a class="dropdown-item lol" href="#">Nacional</a></li>
+                        <li><a class="dropdown-item lol" href="#">Torneo de Primavera</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group me-auto">
+                    <button type="button" class="btn btn-#da3b01 dropdown-toggle lol-hola" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Mira sobre Haikyuuu
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item lol" href="#">Haikyuu</a></li>
+                        <li><a class="dropdown-item lol" href="#">Nacional</a></li>
+                        <li><a class="dropdown-item lol" href="#">Torneo de Primavera</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
@@ -111,38 +166,48 @@
         <h1>Haikyuuu Fan page</h1>
     </div>
 
-    <!-- Karasuno Piratas Section -->
+    <!-- Karasuno Section -->
     <div class="container">
         <div class="text-center section-title">Karasuno</div>
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="https://a.storyblok.com/f/178900/862x477/b611ce9da1/62e4e395e95f38a39e496bc71810d4381655743100_main.jpg/m/filters:quality(95)format(webp)" alt="Hinata" class="img-fluid">
+                    <img src="https://a.storyblok.com/f/178900/862x477/b611ce9da1/62e4e395e95f38a39e496bc71810d4381655743100_main.jpg/m/filters:quality(95)format(webp)"
+                        alt="Hinata" class="img-fluid">
                     <div class="card-body">
                         <h5>Shōyō Hinata</h5>
-                        <p>es el protagonista principal de la serie de Anime/Manga Haikyuu!! ilustrada por Haruichi Furudate. Él actualmente jugador del ASAS Sao Paulo y fue estudiante de la Preparatoria Karasuno.</p>
-                        <a href="https://haikyuu.fandom.com/es/wiki/Sh%C5%8Dy%C5%8D_Hinata"><button class="btn btn-custom">Ver más</button></a>
+                        <p>es el protagonista principal de la serie de Anime/Manga Haikyuu!! ilustrada por Haruichi
+                            Furudate. Él actualmente jugador del ASAS Sao Paulo y fue estudiante de la Preparatoria
+                            Karasuno.</p>
+                        <a href="https://haikyuu.fandom.com/es/wiki/Sh%C5%8Dy%C5%8D_Hinata"><button
+                                class="btn btn-custom">Ver más</button></a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/10/Haikyuu-Kageyama-Karasuno-.jpg" alt="Tobio Kageyama" class="img-fluid">
+                    <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/10/Haikyuu-Kageyama-Karasuno-.jpg"
+                        alt="Tobio Kageyama" class="img-fluid">
                     <div class="card-body">
                         <h5>Tobio Kageyama</h5>
-                        <p>Tobio Kageyama (影山飛雄, Kageyama Tobio) es un jugador profesional de la V-League y exalumno de la Preparatoria Karasuno. A su vez es el que juega habitualmente como Armador</p>
-                        <a href="https://haikyuu.fandom.com/es/wiki/Tobio_Kageyama"><button class="btn btn-custom">Ver más</button></a>
+                        <p>Tobio Kageyama (影山飛雄, Kageyama Tobio) es un jugador profesional de la V-League y exalumno de
+                            la Preparatoria Karasuno. A su vez es el que juega habitualmente como Armador</p>
+                        <a href="https://haikyuu.fandom.com/es/wiki/Tobio_Kageyama"><button class="btn btn-custom">Ver
+                                más</button></a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="https://preview.redd.it/jqxhj629z0951.png?width=720&format=png&auto=webp&s=149d78a504e801ee28b517f4e9684767979b6a7d" alt="Kei Tsukishima" class="img-fluid">
+                    <img src="https://preview.redd.it/jqxhj629z0951.png?width=720&format=png&auto=webp&s=149d78a504e801ee28b517f4e9684767979b6a7d"
+                        alt="Kei Tsukishima" class="img-fluid">
                     <div class="card-body">
                         <h5>Kei Tsukishima</h5>
-                        <p>Kei Tsukishima 「月島蛍 Tsukishima Kei?」 Iba al primer curso en Karasuno, jugando como bloqueador central en el equipo de Volleyball. Es el hermano menor de Akiteru Tsukishima.</p>
-                        <a href="https://haikyuu.fandom.com/es/wiki/Kei_Tsukishima"><button class="btn btn-custom">Ver más</button></a>
-                        
+                        <p>Kei Tsukishima 「月島蛍 Tsukishima Kei?」 Iba al primer curso en Karasuno, jugando como bloqueador
+                            central en el equipo de Volleyball. Es el hermano menor de Akiteru Tsukishima.</p>
+                        <a href="https://haikyuu.fandom.com/es/wiki/Kei_Tsukishima"><button class="btn btn-custom">Ver
+                                más</button></a>
+
                     </div>
                 </div>
             </div>
@@ -155,23 +220,110 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="card">
-                    <img src="https://i.ytimg.com/vi/h58KMsJmnGw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAagbuVHdI22VorACAk71f6lys7pg" alt="Karasuno VS Inarizaki" class="img-fluid">
+                    <img src="https://i.ytimg.com/vi/h58KMsJmnGw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAagbuVHdI22VorACAk71f6lys7pg"
+                        alt="Karasuno VS Inarizaki" class="img-fluid">
                     <div class="card-body">
                         <h5>Karasuno VS Inarizaki</h5>
-                        <p>Karasuno vs Inarizaki es uno de los partidos más emocionantes, divertidos y apasionantes de que hay en el anime, debido a que es la actual campeona del torneo nacional, Karasuno se vio obligada a competir contra ellos, en un partido tan reñido como lo fué este, llevándose la victoria karasuno por un un total de 3:2 en sets ganados, dejando a los actuales campeones fuera del torneo y una de las mayores sopresas vistas en un torneo nacional. </p>
+                        <p>Karasuno vs Inarizaki es uno de los partidos más emocionantes, divertidos y apasionantes de
+                            que hay en el anime, debido a que es la actual campeona del torneo nacional, Karasuno se vio
+                            obligada a competir contra ellos, en un partido tan reñido como lo fué este, llevándose la
+                            victoria karasuno por un un total de 3:2 en sets ganados, dejando a los actuales campeones
+                            fuera del torneo y una de las mayores sopresas vistas en un torneo nacional. </p>
+                        <a href="https://www.youtube.com/watch?v=R2q7FR4GdZY"><button class="btn btn-custom">Ver
+                                más</button></a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="card">
-                    <img src="https://meghanplaysgames.home.blog/wp-content/uploads/2020/07/haikyuessay.jpg?w=825&h=510&crop=1" alt="Shiratorizawa VS Karasuno" class="img-fluid">
+                    <img src="https://meghanplaysgames.home.blog/wp-content/uploads/2020/07/haikyuessay.jpg?w=825&h=510&crop=1"
+                        alt="Shiratorizawa VS Karasuno" class="img-fluid">
                     <div class="card-body">
                         <h5>Shiratorizawa VS Karasuno</h5>
-                        <p>Karasuno vs Shiratorizawa fue el último partido de las Clasificatorias de Primavera de la Prefectura de Miyagi. El partido fue el primer partido de 5 sets para Karasuno y también de toda la serie. Después de muchas peleas duras y un revés temporal en el set final, Karasuno pudo seguir adelante y ganar el partido por 3:2. Con su victoria, Karasuno se clasificó como representante de Miyagi para el Torneo Nacional Spring High.</p>
+                        <p>Karasuno vs Shiratorizawa fue el último partido de las Clasificatorias de Primavera de la
+                            Prefectura de Miyagi. El partido fue el primer partido de 5 sets para Karasuno y también de
+                            toda la serie. Después de muchas peleas duras y un revés temporal en el set final, Karasuno
+                            pudo seguir adelante y ganar el partido por 3:2. Con su victoria, Karasuno se clasificó como
+                            representante de Miyagi para el Torneo Nacional Spring High.</p>
+                        <a href="https://www.youtube.com/watch?v=vh2TibzzMa8"><button class="btn btn-custom">Ver
+                                más</button></a>
+
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <!--Enlaces de tempordas de haikyuu-->
+    <div class="container">
+        <div class="text-center section-title">Temporadas De haikyuu</div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="https://i.pinimg.com/originals/a2/82/e3/a282e3bbb2925364a388c95a85aef89a.jpg" alt="" class="img-fluid">
+                    <div class="card-body">
+                        <h5>Temporada 1</h5>
+                        <p>La historia sigue a Shoyo Hinata, un estudiante de secundaria que se enamora del voleibol
+                            después de ver a un jugador bajo llamado "El Pequeño Gigante" jugar en un torneo nacional. A
+                            pesar de ser bajo de estatura, Hinata se siente inspirado por la habilidad y determinación
+                            del Pequeño Gigante y decide seguir sus pasos.
+
+                        </p>
+                        <a
+                            href="https://www.crunchyroll.com/es/series/GY8VM8MWY/haikyu?srsltid=AfmBOop1UBeLmnS8TpYV4xmXvhkpoLk-0p6_c26caRzhMo5GSxDOc6nG"><button
+                                class="btn btn-custom">Ver
+                                más</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="https://estudiodemanga.wordpress.com/wp-content/uploads/2019/08/fhdruju.jpg?w=1200&h=900&crop=1" alt="" class="img-fluid">
+                    <div class="card-body">
+                        <h5>Temporada 2</h5>
+                        <p>En la segunda temporada de Haikyuu!!, el equipo de la Preparatoria Karasuno busca mejorar
+                            tras su derrota ante Aoba Johsai. Deciden asistir a un campo de entrenamiento en Tokio junto
+                            con equipos poderosos como Nekoma, Fukurodani, y Shiratorizawa, con el objetivo de elevar su
+                            nivel de juego.</p>
+                        <a href="https://www.crunchyroll.com/es/watch/GRP8P9XGR/lets-go-to-tokyo"><button
+                                class="btn btn-custom">Ver
+                                más</button></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mt-5">
+                    <img src="https://m.media-amazon.com/images/S/pv-target-images/602114dbfef06cedcfc3287b34ec111331076fe262a55d532a14cf1d10991ebf.jpg" alt="" class="img-fluid">
+                    <div class="card-body">
+                        <h5>Temporada 3</h5>
+                        <p>La tercera temporada de Haikyuu!!, titulada "Karasuno vs. Shiratorizawa", se centra en un
+                            único y épico partido: la final de las preliminares del torneo de primavera, donde Karasuno
+                            enfrenta al poderoso equipo de Shiratorizawa, liderado por el formidable atacante Wakatoshi
+                            Ushijima, considerado uno de los mejores jugadores de Japón.</p>
+                        <a href="https://www.crunchyroll.com/es/watch/GYWEMP0NY/greetings"><button
+                                class="btn btn-custom">Ver
+                                más</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mt-5">
+                    <img src="https://m.media-amazon.com/images/S/pv-target-images/6a034c1257f06540e7fd32a77ba62311cba9ca1e7a06ebf94e96aa0b374a5691.jpg" alt="" class="img-fluid">
+                    <div class="card-body">
+                        <h5>Temporada 4</h5>
+                        <p>La cuarta temporada de Haikyuu!!, titulada "Haikyuu!!: To The Top", se divide en dos partes y
+                            cubre el viaje de Karasuno hacia el torneo nacional y su participación en él. La temporada
+                            sigue desarrollando tanto el crecimiento personal de los personajes como el equipo en su
+                            conjunto. Enfrentandose a nuevos enemigos, los cuales esperan con ansias.</p>
+                        <a href="https://www.crunchyroll.com/es/watch/GR3K00GDR/introductions"><button
+                                class="btn btn-custom">Ver
+                                más</button></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
     <!-- Footer -->
