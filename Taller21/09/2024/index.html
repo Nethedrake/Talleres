@@ -12,6 +12,7 @@
         crossorigin="anonymous"></script>
     <link rel="icon" href="https://colombiaestudia.com/wp-content/uploads/2021/06/UFPS_Logo.png">
 </head>
+
 <script>
     function calcularFormulario() {
         event.preventDefault();
@@ -27,6 +28,35 @@
 
         alert("Su definitiva es: " + definitiva.toFixed(2));
     }
+
+    function calcularOperacion(tipo) {
+        event.preventDefault();
+        const valor1 = parseFloat(document.getElementById('valor1').value) || 0;
+        const valor2 = parseFloat(document.getElementById('valor2').value) || 0;
+        let resultado = 0;
+
+        switch (tipo) {
+            case 'suma':
+                resultado = valor1 + valor2;
+                break;
+            case 'resta':
+                resultado = valor1 - valor2;
+                break;
+            case 'multiplicacion':
+                resultado = valor1 * valor2;
+                break;
+            case 'division':
+                if (valor2 !== 0) {
+                    resultado = valor1 / valor2;
+                } else {
+                    alert("No se puede dividir por 0");
+                    return;
+                }
+                break;
+        }
+
+        alert("El resultado es: " + resultado);
+    }
 </script>
 
 <body>
@@ -40,11 +70,9 @@
         </div>
         <!-- Carrusel de imagenes -->
         <div id="carouselExample" class="carousel slide">
-
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://eventos.ufpso.edu.co/IX_ENCUENTRO/assets/img/slide/slide-5.jpg"
-                        class="d-block w-100" alt="...">
+                    <img src="https://eventos.ufpso.edu.co/IX_ENCUENTRO/assets/img/slide/slide-5.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
                     <img src="https://aseguramientodelacalidad.ufpso.edu.co/wp-content/uploads/2021/10/DJI_0008-scaled.jpg"
@@ -76,183 +104,87 @@
                     <div class="accordion-body">
                         <form onsubmit="calcularFormulario(event)">
                             <div class="row mb-3">
-                                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Nota
-                                    1</label>
+                                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Nota 1</label>
                                 <div class="col-sm-10">
                                     <input type="number" class="form-control form-control-sm" id="nota1" step="0.01">
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Nota
-                                    2</label>
+                                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Nota 2</label>
                                 <div class="col-sm-10">
                                     <input type="number" class="form-control form-control-sm" id="nota2" step="0.01">
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Nota
-                                    3</label>
+                                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Nota 3</label>
                                 <div class="col-sm-10">
                                     <input type="number" class="form-control form-control-sm" id="nota3" step="0.01">
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Examen
-                                    Final</label>
+                                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Examen Final</label>
                                 <div class="col-sm-10">
-                                    <input type="number" class="form-control form-control-sm" id="examenFinal"
-                                        step="0.01">
+                                    <input type="number" class="form-control form-control-sm" id="examenFinal" step="0.01">
                                 </div>
                             </div>
-                            <div class="row mb-3">
-                                <label for="colFormLabelSm"
-                                    class="col-sm-2 col-form-label col-form-label-sm">Definitiva</label>
-                                <div class="col-sm-10">
-                                    <input type="number" class="form-control form-control-sm" id="">
-                                </div>
-                            </div>
-                            <button type="submit" oneclick="calcularFormulario()">Calcular</button>
+                            <button type="submit">Calcular</button>
                         </form>
                     </div>
                 </div>
             </div>
-
         </div>
-        <!--Botones-->
-        <div id="mathBoxes p-5">
+
+        <!--Botones para operaciones-->
+        <div id="mathBoxes" class="p-5">
             <div class="container text-center">
                 <div class="row">
                     <div class="col">
                         <p>
-                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseWidthExample" aria-expanded="false"
-                                aria-controls="collapseWidthExample">
+                            <button class="btn btn-primary" type="button" onclick="calcularOperacion('suma')">
                                 Suma
                             </button>
                         </p>
-                        <div style="min-height: 120px;">
-                            <div class="collapse collapse-horizontal" id="collapseWidthExample">
-                                <div class="card card-body" style="width: 300px;">
-                                    <form class="row g-3">
-                                        <div class="col-md-4">
-                                            <label for="validationDefault01" class="form-label">Valor 1</label>
-                                            <input type="number" class="form-control" id="validationDefault01" value=""
-                                                required>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label for="validationDefault02" class="form-label">Valor 2</label>
-                                            <input type="number" class="form-control" id="validationDefault02" value=""
-                                                required>
-                                        </div>
-                                        <div class="col-12">
-                                            <button class="btn btn-primary" type="submit">Calcular</button>
-                                        </div>
-                                    </form>
+                        <div>
+                            <form class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="valor1" class="form-label">Valor 1</label>
+                                    <input type="number" class="form-control" id="valor1">
                                 </div>
-                            </div>
+                                <div class="col-md-6">
+                                    <label for="valor2" class="form-label">Valor 2</label>
+                                    <input type="number" class="form-control" id="valor2">
+                                </div>
+                            </form>
                         </div>
                     </div>
 
                     <div class="col">
                         <p>
-                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseWidthExample2" aria-expanded="false"
-                                aria-controls="collapseWidthExample">
+                            <button class="btn btn-primary" type="button" onclick="calcularOperacion('resta')">
                                 Resta
                             </button>
                         </p>
-                        <div style="min-height: 120px;">
-                            <div class="collapse collapse-horizontal" id="collapseWidthExample2">
-                                <div class="card card-body" style="width: 300px;">
-                                    <form class="row g-3">
-                                        <div class="col-md-4">
-                                            <label for="validationDefault01" class="form-label">Edad 1</label>
-                                            <input type="number" class="form-control" id="validationDefault01" value=""
-                                                required>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label for="validationDefault02" class="form-label">Edad 2</label>
-                                            <input type="number" class="form-control" id="validationDefault02" value=""
-                                                required>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label for="validationDefault03" class="form-label">Edad 3</label>
-                                            <input type="number" class="form-control" id="validationDefault03" value=""
-                                                required>
-                                        </div>
-                                        <div class="col-12">
-                                            <button class="btn btn-primary" type="submit">Calcular</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="col">
                         <p>
-                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseWidthExample3" aria-expanded="false"
-                                aria-controls="collapseWidthExample">
+                            <button class="btn btn-primary" type="button" onclick="calcularOperacion('multiplicacion')">
                                 Multiplicar
                             </button>
                         </p>
-                        <div style="min-height: 120px;">
-                            <div class="collapse collapse-horizontal" id="collapseWidthExample3">
-                                <div class="card card-body" style="width: 300px;">
-                                    <form class="row g-3">
-                                        <div class="col-md-4">
-                                            <label for="validationDefault01" class="form-label">Numero 1</label>
-                                            <input type="number" class="form-control" id="validationDefault01" value=""
-                                                required>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label for="validationDefault02" class="form-label">Numero 2</label>
-                                            <input type="number" class="form-control" id="validationDefault02" value=""
-                                                required>
-                                        </div>
-                                        <div class="col-12">
-                                            <button class="btn btn-primary" type="submit">Calcular</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="col">
                         <p>
-                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseWidthExample4" aria-expanded="false"
-                                aria-controls="collapseWidthExample">
+                            <button class="btn btn-primary" type="button" onclick="calcularOperacion('division')">
                                 Dividir
                             </button>
                         </p>
-                        <div style="min-height: 120px;">
-                            <div class="collapse collapse-horizontal" id="collapseWidthExample4">
-                                <div class="card card-body" style="width: 300px;">
-                                    <form class="row g-3">
-                                        <div class="col-md-4">
-                                            <label for="validationDefault01" class="form-label">Numero 1</label>
-                                            <input type="number" class="form-control" id="validationDefault01" value=""
-                                                required>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label for="validationDefault02" class="form-label">Numero 2</label>
-                                            <input type="number" class="form-control" id="validationDefault02" value=""
-                                                required>
-                                        </div>
-                                        <div class="col-12">
-                                            <button class="btn btn-primary" type="submit">Calcular</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </body>
 
 </html>
