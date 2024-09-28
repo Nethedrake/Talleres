@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripciones Futuristas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        body {
+            background: #121212;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .card {
+            background: rgba(30, 30, 30, 0.9);
+            border: none;
+            border-radius: 15px;
+        }
+
+        .card-header {
+            background-color: #00bcd4;
+            color: #fff;
+            border-radius: 15px 15px 0 0;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .form-control, .form-select {
+            background: #1f1f1f;
+            color: #fff;
+            border: 1px solid #00bcd4;
+            border-radius: 10px;
+        }
+
+        .form-control::placeholder, .form-select {
+            color: #b0b0b0;
+        }
+
+        .btn-primary {
+            background-color: #00bcd4;
+            border: none;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0097a7;
+        }
+
+        .form-check-input {
+            background-color: #1f1f1f;
+            border: 1px solid #00bcd4;
+        }
+
+        .table-borderless td {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center"> 
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-header">
+                        Inscripciones
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-borderless">
+                            <tr>
+                                <td class="text-white">Nombre</td>
+                                <td>
+                                    <input type="text" name="nombre" class="form-control" placeholder="Ingresa tu nombre">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-white">Género</td>
+                                <td>
+                                    <select name="genero" class="form-select">
+                                        <option value="Femenino">Femenino</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Otro">Otro</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-white">Edad</td>
+                                <td>
+                                    <input type="number" name="Edad" class="form-control" placeholder="Ingresa tu edad">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-white">Estado Civil</td>
+                                <td>
+                                    <div class="form-check">
+                                        <input type="radio" name="estado" value="soltero" class="form-check-input">
+                                        <label class="text-white">Soltero</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="estado" value="casado" class="form-check-input">
+                                        <label class="text-white" >Casado</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" name="estado" value="union libre" class="form-check-input">
+                                        <label class="text-white">Unión Libre</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <table class="table table-borderless">
+                                        <tr>
+                                            <td colspan="4" class="text-center text-white">Gustos Musicales</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-white" >Vallenato</td>
+                                            <td class="text-white">Reguetton</td>
+                                            <td class="text-white" >Trap</td>
+                                            <td class="text-white">Bachata</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="Vallenato" value="Vallenato" class="form-check-input"></td>
+                                            <td><input type="checkbox" name="Reguetton" value="Reguetton" class="form-check-input"></td>
+                                            <td><input type="checkbox" name="Trap" value="Trap" class="form-check-input"></td>
+                                            <td><input type="checkbox" name="Bachata" value="Bachata" class="form-check-input"></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="text-center">
+                                    <input type="button" value="Guardar" class="btn btn-primary shadow">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
