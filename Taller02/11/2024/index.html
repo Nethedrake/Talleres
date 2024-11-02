@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes Personalizados</title>
+    <style>
+       
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor centrado con componentes personalizados -->
+    <div class="center-container">
+        <!-- Componente Ayuda Span -->
+        <ayuda-span>Este es un texto de ayuda</ayuda-span>
+
+        <!-- Componente Botón Notificaciones -->
+        <boton-notificaciones></boton-notificaciones>
+
+        <!-- Componente Caja de Texto para Clave -->
+        <caja-texto-clave></caja-texto-clave>
+
+        <!-- Componente Formulario con Cupón de Descuento -->
+        <formulario-descuento></formulario-descuento>
+    </div>
+    <script src="componentes.js"></script>
+</body>
+</html>
